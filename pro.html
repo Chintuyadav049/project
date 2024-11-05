@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpeg" href="whatsap.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Connect</title>
+    <link rel="stylesheet" href="ss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            background-color: #e0f7fa;
+            padding: 10px 0;
+            font-weight: bold;
+            color: #00796b;
+            margin-top: 10px;
+        }
+        .marquee div {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="WhatsApp.jpg" alt="Logo" class="logo"> 
+        <h1>Farmers Connect</h1>
+        <p>Connecting farmers directly with consumers and retailers.</p>
+        
+        <nav class="top-nav">
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                    <a href="#about">About Us</a>
+                    <a href="#login" id="login-button">Login</a>
+                    <a href="#register" id="register-button">Register</a>
+                    <a href="#contact" id="contact-button">Contact Us</a>
+                    <a href="products.html">Products</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="marquee">
+        <div>Welcome to Farmers Connect! Enjoy fresh produce directly from farmers!</div>
+    </div>
+
+    <main>
+        <section id="slider">
+            <div class="slides">
+                <img src="farmer.jpeg" alt="Farmers Market" class="active">
+                <img src="tractor.jpg" alt="Fresh Produce">
+                <img src="fruits.jpg" alt="Organic Farming">
+            </div>
+            <div class="dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Farmers often face challenges in accessing markets, leading to lower income due to middlemen. Our platform bridges this gap, allowing farmers to sell their produce at fair prices.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li><i class="fas fa-seedling"></i> List Your Produce</li>
+                <li><i class="fas fa-comments"></i> Negotiate Prices</li>
+                <li><i class="fas fa-shopping-cart"></i> Manage Transactions</li>
+            </ul>
+        </section>
+
+        <section id="products">
+            <h2>Available Produce</h2>
+            <div id="product-list" class="product-list"></div>
+        </section>
+
+        <section id="login" class="modal">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit">Login</button>
+                <button type="button" class="close-modal">Close</button>
+            </form>
+        </section>
+
+        <section id="register" class="modal">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Name:</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <button type="submit">Register</button>
+                <button type="button" class="close-modal">Close</button>
+            </form>
+        </section>
+
+        <section id="contact" class="modal">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+                <button type="button" class="close-modal">Close</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Farmers Connect. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
